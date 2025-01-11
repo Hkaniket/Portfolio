@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .skills div, .projects div {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+            flex: 1 1 calc(33.333% - 30px);
+            box-sizing: border-box;
+            transition: transform 0.3s;
+        }
+        .skills div:hover, .projects div:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .profile-picture {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #1100ff;
+        }
+        .projects div img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .projects div h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aniket Mahajan Portfolio</h1>
+        <p>Web Developer | Designer | Programmer</p>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="1000098784.jpg" alt="Aniket Mahajan" class="profile-picture">
+        <p>Hi! I'm Aniket, a passionate web developer with experience in creating dynamic and responsive websites. I love coding, designing, and solving problems. When I'm not coding, you can find me exploring new technologies or hiking in nature.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>React</div>
+            <div>Node.js</div>
+            <div>Python</div>
+            <div>Figma</div>
+            <div>Git & GitHub</div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div>
+                <img src="C:\Users\HARE KRISHNA\OneDrive\Documents\portfolio website code\text.html" alt="Project 1">
+                <h3>Loader coding </h3>
+                <p>My this project is about loader coding </p>
+            </div>
+            <div>
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Another cool project description.</p>
+            </div>
+            <div>
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Yet another cool project description.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: aniketyashwantmahajan@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/Hkaniket" target="_blank">github.com/Hkaniket</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/aniket-yashwant-mahajan-b2335b343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/Aniket</a></p>
+    </section>
+    <footer
+        <p>&copy; 2024 Aniket Mahajan. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
