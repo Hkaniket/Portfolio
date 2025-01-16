@@ -14,25 +14,30 @@
             background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
             color: #333;
             scroll-behavior: smooth;
+            background-image: url('background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
         }
 
         header {
             background: linear-gradient(to right, #4CAF50, #00bcd4);
             color: white;
-            padding: 40px 0;
+            padding: 20px 0;
             text-align: center;
             position: relative;
         }
 
         header h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 2.5em;
             animation: fadeIn 1s ease-out;
         }
 
         header p {
             margin: 5px 0 0;
-            font-size: 1.2em;
+            font-size: 1em;
         }
 
         nav {
@@ -46,7 +51,7 @@
 
         nav a {
             color: white;
-            padding: 14px 20px;
+            padding: 10px 15px;
             text-decoration: none;
             display: block;
             font-weight: bold;
@@ -58,10 +63,10 @@
         }
 
         section {
-            padding: 40px 20px;
+            padding: 20px 15px;
             max-width: 1200px;
             margin: 20px auto;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.85);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             opacity: 0;
@@ -82,11 +87,11 @@
 
         .skills div, .projects div {
             background-color: #f0f0f0;
-            padding: 20px;
+            padding: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
             text-align: center;
-            flex: 1 1 calc(33.333% - 30px);
+            flex: 1 1 calc(50% - 20px);
             box-sizing: border-box;
             transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -99,11 +104,14 @@
         .profile-picture {
             display: block;
             margin: 0 auto 20px;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             border: 5px solid #00bcd4;
             animation: fadeIn 1s ease-out;
+            background-image: url('self-picture.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         .projects div img {
@@ -120,7 +128,7 @@
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background: linear-gradient(to right, #333, #555);
             color: white;
         }
@@ -128,6 +136,35 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .skills div, .projects div {
+                flex: 1 1 calc(100% - 20px);
+            }
+
+            nav a {
+                padding: 10px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            nav a {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -144,7 +181,7 @@
     </nav>
     <section id="about">
         <h2>About Me</h2>
-        <img src="1000098784.jpg" alt="Aniket Mahajan" class="profile-picture">
+        <div class="profile-picture"></div>
         <p>Hi! I'm Aniket, a passionate web developer with experience in creating dynamic and responsive websites. I love coding, designing, and solving problems. When I'm not coding, you can find me exploring new technologies or hiking in nature.</p>
     </section>
     <section id="skills">
@@ -164,21 +201,14 @@
         <h2>Projects</h2>
         <div class="projects">
             <div>
-                <img src="project1.jpg" alt="Project 1">
-                 <p>Loder website: <a href="https://hkaniket.github.io/loder-code/" target="_blank">loder-website/Hkaniket</a></p>
-                <h3>Loader Coding</h3>
-                <p>This project demonstrates advanced loader animation techniques.</p>
+                <img src="screenshot-loder.png" alt="Loder Project Screenshot">
+                <h3>CSS-Only Page Loader</h3>
+                <p>This project showcases a pure CSS implementation of a page loader animation, demonstrating proficiency in CSS animations and design. <a href="https://hkaniket.github.io/loder-code/" target="_blank">View Project</a></p>
             </div>
             <div>
-                <img src="project2.jpg" alt="Project 2">
-                <p>Expenzo: <a href="https://hkaniket.github.io/expenzo/" target="_blank">Expenzo/Hkaniket</a></p>
-                    <h3>Expenzo</h3>
-                <p>An innovative project showcasing modern UI elements.</p>
-            </div>
-            <div>
-                <img src="project3.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>An example of dynamic web application functionality.</p>
+                <img src="screenshot-expenzo.png" alt="Expenzo Project Screenshot">
+                <h3>Expenzo</h3>
+                <p>Expenzo is a web-based expense calculator that allows users to register, log in, and manage their expenses across various categories, enhancing personal finance management. <a href="https://hkaniket.github.io/expenzo/" target="_blank">View Project</a></p>
             </div>
         </div>
     </section>
@@ -186,10 +216,9 @@
         <h2>Contact</h2>
         <p>Email: aniketyashwantmahajan@gmail.com</p>
         <p>GitHub: <a href="https://github.com/Hkaniket" target="_blank">github.com/Hkaniket</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/aniket-yashwant-mahajan-b2335b343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/Aniket</a></p>
     </section>
     <footer>
-        <p>&copy; 2024 Aniket Mahajan. All Rights Reserved.</p>
+        <p>&copy; 2025 Aniket Mahajan. All Rights Reserved.</p>
     </footer>
 
     <script>
